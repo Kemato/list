@@ -81,23 +81,23 @@ int main() {
 	setlocale(LC_ALL, "Rus");
 	bool f = true;
 	string tx, th;
-	cout << "Добро пожаловать в Дневник" << endl << endl;
+	cout << "Welcome to the Diary" << endl << endl;
 	//for (int i = 0; i < 500000000; ++i);
 	while (f) {
 		system("cls");
-		cout << "0 - Добавить запись" << endl;
-		cout << "1 - Вывести все записи" << endl;
-		cout << "2 - Удалить запись по номеру" << endl;
-		cout << "3 - Сжечь дневник" << endl;
-		cout << "Я выбираю: ";
+		cout << "0 - Add an entry" << endl;
+		cout << "1 - Output all entries" << endl;
+		cout << "2 - Delete an entry by number" << endl;
+		cout << "3 - Burn the diary" << endl;
+		cout << "I choose: ";
 		char c;
 		cin >> c;
 		switch (c) {
 		case'0':
 			system("cls");
-			cout << "Введите тему: ";
+			cout << "Enter a subject: ";
 			cin >> th;
-			cout << "Введите текст: ";
+			cout << "Enter the text: ";
 			cin >> tx;
 			if (sizo == 0) {
 				Diary* m = new Diary;
@@ -111,7 +111,7 @@ int main() {
 			}
 			else {
 				int k;
-				cout << "На какой позиции создать запись?(1-" << sizo + 1 << "): ";
+				cout << "At which position to create a record?(1-" << sizo + 1 << "): ";
 				cin >> k;
 				if (k == sizo + 1)l = true;
 				else l = false;
@@ -125,12 +125,12 @@ int main() {
 		case'1':
 			Pull();
 			char s;
-			cout << "Введите любой символ для продолжения ";
+			cout << "Enter any key to continue ";
 			cin >> s;
 			break;
 		case'2':
 			system("cls");
-			cout << "Какую запись удалить?(1-" << sizo << "): ";
+			cout << "Which record to delete?(1-" << sizo << "): ";
 			int k;
 			cin >> k;
 			Cl(Poz(k));
